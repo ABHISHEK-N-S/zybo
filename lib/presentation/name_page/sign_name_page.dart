@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:zybo/presentation/home_page/home_page.dart';
 import 'package:zybo/style/app_colors.dart';
-import 'package:zybo/widgets/custom_button.dart';
+import 'package:zybo/global_widgets/custom_button.dart';
 
 class SignNamePage extends StatelessWidget {
   const SignNamePage({super.key});

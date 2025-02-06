@@ -5,8 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:zybo/bloc/home/home_bloc.dart';
 import 'package:zybo/bloc/home/home_state.dart';
+import 'package:zybo/global_widgets/custom_textfield.dart';
 import 'package:zybo/style/app_colors.dart';
-import 'package:zybo/widgets/bottom_nav.dart';
+import 'package:zybo/global_widgets/bottom_nav.dart';
 
 import 'widgets/carousal_banner.dart';
 
@@ -43,16 +44,31 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Search',
-                      prefixIcon: const Icon(Icons.search),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                  ),
-                  const BannerCarousel(),
+                children: [const Gap(30),
+                  const CustomSearchTextField()
+                  // Container(
+                  //   decoration: const BoxDecoration(
+                  //     color: AppColors.white,
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         // shadow color
+                  //         spreadRadius: 2,
+                  //         blurRadius: 5,
+                  //         offset: Offset(0, 3),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   child: TextField(
+                  //     decoration: InputDecoration(
+                  //       hintText: 'Search',
+                  //       prefixIcon: const Icon(Icons.search),
+                  //       border: OutlineInputBorder(
+                  //         borderRadius: BorderRadius.circular(10),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  , BannerCarousel(),
                   const SizedBox(height: 10),
                   const Text('Popular Product',
                       style:

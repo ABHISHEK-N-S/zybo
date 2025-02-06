@@ -5,7 +5,7 @@ import 'package:zybo/bloc/home/home_bloc.dart';
 import 'package:zybo/bloc/home/home_state.dart';
 import 'package:zybo/style/app_colors.dart';
 import 'package:zybo/style/text_styles.dart';
-import 'package:zybo/widgets/bottom_nav.dart';
+import 'package:zybo/global_widgets/bottom_nav.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

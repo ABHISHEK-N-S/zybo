@@ -6,7 +6,7 @@ import 'package:zybo/bloc/otp/otp_event.dart';
 import 'package:zybo/bloc/otp/otp_state.dart';
 import 'package:zybo/presentation/otp_page/otp_page.dart';
 import 'package:zybo/style/app_colors.dart';
-import 'package:zybo/widgets/custom_button.dart';
+import 'package:zybo/global_widgets/custom_button.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

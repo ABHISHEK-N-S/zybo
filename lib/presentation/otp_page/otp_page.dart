@@ -125,7 +125,7 @@ import 'package:zybo/bloc/otp/otp_bloc.dart';
 import 'package:zybo/bloc/otp/otp_state.dart';
 import 'package:zybo/presentation/name_page/sign_name_page.dart';
 import 'package:zybo/style/app_colors.dart';
-import 'package:zybo/widgets/custom_button.dart';
+import 'package:zybo/global_widgets/custom_button.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
   final String phoneNumber;
