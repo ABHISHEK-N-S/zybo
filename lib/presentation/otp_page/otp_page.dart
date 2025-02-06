@@ -124,6 +124,7 @@ import 'package:gap/gap.dart';
 import 'package:zybo/bloc/otp/otp_bloc.dart';
 import 'package:zybo/bloc/otp/otp_state.dart';
 import 'package:zybo/presentation/name_page/sign_name_page.dart';
+import 'package:zybo/style/app_colors.dart';
 import 'package:zybo/widgets/custom_button.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
@@ -216,9 +217,25 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Gap(50),
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () => Navigator.of(context).pop(),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      color: AppColors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 8,
+                          spreadRadius: 2,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
                   ),
                   const Gap(20),
                   const Text(

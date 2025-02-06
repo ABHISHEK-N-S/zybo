@@ -24,6 +24,8 @@
 //     }
 //   }
 // }
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:zybo/data/model/otp_model.dart';
 import 'package:zybo/data/service/otp_service.dart';
@@ -36,6 +38,7 @@ class OtpDatasource {
   Future<OtpListModel> getMobileOtpApi(String phoneNumber) async {
     try {
       final Response? response = await service.getMobileOtpApi(phoneNumber);
+      log(response?.data);
       return OtpListModel.fromJson(response?.data as Map<String, dynamic>);
     } catch (e) {
       throw APIException(
@@ -45,9 +48,11 @@ class OtpDatasource {
     }
   }
 
-  Future<OtpListModel> loginRegisterApi(String phoneNumber, String firstName) async {
+  Future<OtpListModel> loginRegisterApi(
+      String phoneNumber, String firstName) async {
     try {
-      final Response? response = await service.loginRegisterApi(phoneNumber, firstName);
+      final Response? response =
+          await service.loginRegisterApi(phoneNumber, firstName);
       return OtpListModel.fromJson(response?.data as Map<String, dynamic>);
     } catch (e) {
       throw APIException(

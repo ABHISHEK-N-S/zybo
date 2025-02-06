@@ -1,5 +1,3 @@
-
-
 import 'package:zybo/presentation/splash/splash.screen.dart';
 
 var routes = {
